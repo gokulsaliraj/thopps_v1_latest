@@ -1,0 +1,896 @@
+<!doctype html>
+<html class="h-100" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+  <meta name="description" content="A well made and handcrafted Bootstrap 5 template">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="img/favicon.png">
+  <meta name="author" content="Holger Koenemann">
+  <meta name="generator" content="Eleventy v2.0.0">
+  <meta name="HandheldFriendly" content="true">
+  <title>Thopps</title>
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/theme.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <style>
+    .cta-button {
+      display: inline-block;
+      padding: 1rem 3rem;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #fff;
+      background: linear-gradient(135deg, #000000, #434343);
+      /* black gradient */
+      border: none;
+      border-radius: 9999px;
+      /* oval shape */
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+      user-select: none;
+      text-align: center;
+    }
+
+    .cta-button:focus {
+      outline: none;
+      /* Removes the blue outline */
+      /* Optional: Add your own focus style instead for accessibility */
+      box-shadow: 0 0 0 3px rgba(100, 100, 100, 0.5);
+      /* subtle grey focus ring */
+    }
+  </style>
+  <style>
+    .text-tech-glow {
+      background: linear-gradient(90deg, #00eaff, #8a2be2);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 600;
+    }
+
+    .bg-tech-glow {
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #0f0f0f 100%);
+    }
+
+    .scale-on-hover {
+      transition: transform 0.4s ease;
+    }
+
+    .scale-on-hover:hover {
+      transform: scale(1.03);
+    }
+
+    .custom-header {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 3rem 1.5rem;
+      position: relative;
+      z-index: 2;
+      /* ensures it stays above the overlay */
+    }
+
+    .typed-words span {
+      position: absolute;
+      left: 0;
+      top: 0;
+      opacity: 0;
+      transform: translateX(100%);
+      transition: transform 0.6s ease, opacity 0.6s ease;
+      white-space: nowrap;
+    }
+
+    .typed-words span.active {
+      opacity: 1;
+      transform: translateX(0);
+      z-index: 2;
+    }
+
+    .typed-words span.exit {
+      opacity: 0;
+      transform: translateX(-100%);
+      z-index: 1;
+    }
+  </style>
+
+
+  <style>
+
+  </style>
+
+
+
+</head>
+
+
+<!-- Navbar -->
+<nav id="navScroll" class="navbar fixed-top bg-black px-vw-5 navbar-expand-md" tabindex="0">
+  <div class="container">
+    <a class="navbar-brand pe-md-4 fs-4 text-center" href="index.html">
+      <img src="logo.png" alt="Logo" style="max-height: 60px; width: auto;" />
+    </a>
+
+    <!-- Custom animated toggler -->
+    <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="bar top-bar"></span>
+      <span class="bar middle-bar"></span>
+      <span class="bar bottom-bar"></span>
+    </button>
+
+    <div class="collapse navbar-collapse bg-black" id="navbarNav">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 list-group list-group-horizontal flex-row flex-wrap">
+        <li class="nav-item">
+          <a class="nav-link fs-5" href="index.html" aria-label="Homepage">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fs-5" href="content.html" aria-label="A sample content page">Products</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fs-5" href="system.html" aria-label="A system message page">System</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<!-- Navbar toggle animation JS -->
+<script>
+  const toggler = document.querySelector('.custom-toggler');
+  const navbarCollapse = document.getElementById('navbarNav');
+
+  navbarCollapse.addEventListener('show.bs.collapse', () => {
+    toggler.classList.add('open');
+  });
+
+  navbarCollapse.addEventListener('hide.bs.collapse', () => {
+    toggler.classList.remove('open');
+  });
+</script>
+
+
+<main>
+  <div class=" bg-black hero-container">
+    <canvas id="starfield"></canvas>
+
+    <h1>
+      Making<br>
+      <span class="typed-words"></span><br>
+      work for everyone.
+    </h1>
+
+    <p>
+      We blend human ingenuity and intelligent technology to build things that matter.
+    </p>
+
+    <a href="#what-we-do" class="cta-button" role="button">
+      Explore What We Do ↓
+    </a>
+  </div>
+
+
+
+
+
+
+
+  <div class="bg-white py-vh-3">
+    <div class="container px-vw-5 py-vh-3 rounded-5">
+      <div class="row gx-5">
+
+        <!-- Left Column -->
+        <div class="col-12 col-md-6">
+
+          <!-- What We Do -->
+          <div class="p-5 pt-0 mb-4" data-aos="fade" data-aos-delay="200">
+            <span class="h5 fw-lighter" style="color: #888;">What We Do</span>
+            <h2 class="display-4 fw-lighter mt-2" style="color: #222;">
+              We build technologies, empower people, and create ventures that make a real impact.
+            </h2>
+            <p class="pb-4 fs-6" style="color: #555;">Here’s how we bring that to life:</p>
+          </div>
+
+          <!-- Card 1 -->
+          <div class="card mb-5 shadow-sm card-hover" data-aos="zoom-in-up" style="border-radius: 1.25rem;">
+            <div class="rounded-5 p-0 overflow-hidden">
+              <img src="./24070840_bwink_edu_05_single_11 - Copy.jpg" alt="Thopps Dev House" width="582" height="327"
+                class="img-fluid rounded-5 no-bottom-radius" loading="lazy" />
+              <div class="p-5">
+                <h2 class="fw-lighter" style="color: #222;">Innovating for Greater Good</h2>
+                <p class="pb-4 fs-6" style="color: #555;">We use creativity and technology to tackle meaningful
+                  challenges and help build stronger, more connected communities.</p>
+                <a href="#" class="link-fancy-dark">Read more</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+
+          <div class="card mb-5 shadow-sm card-hover" data-aos="zoom-in-up" style="border-radius: 1.25rem;">
+            <div class="rounded-5 p-0 overflow-hidden">
+              <img src="./24070814_bwink_edu_01_single_12.jpg" alt="Thopps Dev House" width="582" height="327"
+                class="img-fluid rounded-5 no-bottom-radius" loading="lazy" />
+              <div class="p-5">
+                <h2 class="fw-lighter" style="color: #222;">Building Ventures: By Us & With You</h2>
+                <p class="pb-4 fs-6" style="color: #555;">We create our own spin-off ventures and partner with others
+                  to transform great ideas into thriving products and businesses.</p>
+                <a href="#" class="link-fancy-dark">Read more</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Column -->
+        <div class="col-12 col-md-6">
+
+          <!-- Card 2 -->
+          <div class="card mb-5 shadow-sm card-hover" data-aos="zoom-in-up" style="border-radius: 1.25rem;">
+            <div class="rounded-5 p-0 overflow-hidden">
+              <img src="./24070852_bwink_edu_07_single_06.jpg" alt="Thopps Dev House" width="582" height="327"
+                class="img-fluid rounded-5 no-bottom-radius" loading="lazy" />
+              <div class="p-5">
+                <h2 class="fw-lighter" style="color: #222;">Discover. Build. Solve.</h2>
+                <p class="pb-4 fs-6" style="color: #555;">We dive into research, explore new possibilities, and turn
+                  insights into solutions that make everyday life better.</p>
+                <a href="#" class="link-fancy-dark">Read more</a>
+              </div>
+            </div>
+          </div>
+          <!-- Card 4 -->
+
+          <div class="card mb-5 shadow-sm card-hover" data-aos="zoom-in-up" style="border-radius: 1.25rem;">
+            <div class="rounded-5 p-0 overflow-hidden">
+              <img src="./24122305_bwink_ppl_08_single_04.jpg" alt="Thopps Dev House" width="582" height="327"
+                class="img-fluid rounded-5 no-bottom-radius" loading="lazy" />
+              <div class="p-5">
+                <h2 class="fw-lighter" style="color: #222;">Upskilling. Uplifting.</h2>
+                <p class="pb-4 fs-6" style="color: #555;">We share knowledge, encourage learning, and help people
+                  build new skills so everyone can grow and succeed.</p>
+                <a href="#" class="link-fancy-dark">Read more</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+<section class="reveal-heading" id="what-we-are-building" aria-label="What We Are Building Section">
+  <h2>What We Are Building</h2>
+
+  <div class="chips" role="list" aria-label="Project categories filter">
+    <div class="chip active" data-filter="all" role="listitem" tabindex="0" aria-pressed="true">All</div>
+    <div class="chip" data-filter="devhouse" role="listitem" tabindex="0" aria-pressed="false">DevHouse</div>
+    <div class="chip" data-filter="learning" role="listitem" tabindex="0" aria-pressed="false">Learning</div>
+    <div class="chip" data-filter="venture" role="listitem" tabindex="0" aria-pressed="false">Venture</div>
+    <div class="chip" data-filter="social" role="listitem" tabindex="0" aria-pressed="false">Social</div>
+  </div>
+
+  <div class="card-grid">
+    <article class="card_wwb" data-category="devhouse" tabindex="0" aria-label="Project Wowlyx">
+      <img src="./4239566_90439.jpg" alt="Wowlyx project preview" />
+      <div class="card-content">
+        <h3>Wowlyx</h3>
+        <p>Vision intelligence platform for real-time video analytics and smart environments.</p>
+      </div>
+    </article>
+
+    <article class="card_wwb" data-category="devhouse" tabindex="0" aria-label="Project AIQ">
+      <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80" alt="AIQ project preview" />
+      <div class="card-content">
+        <h3>AIQ</h3>
+        <p>Enterprise AI platform for managing knowledge, automating workflows, and integrating intelligent agents.</p>
+      </div>
+    </article>
+
+    <article class="card_wwb" data-category="learning" tabindex="0" aria-label="Project Thopps Varsity">
+      <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=600&q=80" alt="Thopps Varsity learning platform" />
+      <div class="card-content">
+        <h3>Thopps Varsity</h3>
+        <p>Our learning hub for upskilling, growth, and unlocking new potential.</p>
+      </div>
+    </article>
+
+    <article class="card_wwb" data-category="venture" tabindex="0" aria-label="Project Techspire Innovations">
+      <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=600&q=80" alt="Techspire Innovations" />
+      <div class="card-content">
+        <h3>Techspire Innovations</h3>
+        <p>Delivering intelligent tech solutions for businesses and communities in Singapore.</p>
+      </div>
+    </article>
+
+    <article class="card_wwb" data-category="venture" tabindex="0" aria-label="Project NallaHealth">
+      <img src="https://images.unsplash.com/photo-1521790366327-3a3a4dcd5700?auto=format&fit=crop&w=600&q=80" alt="NallaHealth platform" />
+      <div class="card-content">
+        <h3>NallaHealth</h3>
+        <p>A holistic healthcare platform designed for better health, wellness, and care management.</p>
+      </div>
+    </article>
+
+    <article class="card_wwb" data-category="venture" tabindex="0" aria-label="Project Swimmunity">
+      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Swimmunity aquatic community" />
+      <div class="card-content">
+        <h3>Swimmunity</h3>
+        <p>Building connected aquatic communities—combining fitness, fun, and water safety for everyone.</p>
+      </div>
+    </article>
+
+    <article class="card_wwb" data-category="social" tabindex="0" aria-label="Project MeenachilRiver.org">
+      <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=600&q=80" alt="MeenachilRiver monitoring" />
+      <div class="card-content">
+        <h3>MeenachilRiver.org</h3>
+        <p>Smart river and rain monitoring solution that uses intelligent prediction to help prevent floods and natural disasters.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+
+  <script>
+    const chipsMain = document.querySelectorAll('.chip');
+    const wwbCards = document.querySelectorAll('.card_wwb');
+
+    function filterCards(category) {
+      wwbCards.forEach(card => {
+        const match = category === 'all' || card.dataset.category === category;
+        card.style.display = match ? 'block' : 'none';
+
+        if (match) {
+          card.style.opacity = '0'; // reset before animation
+          card.classList.remove('animated');
+          // Trigger reflow
+          void card.offsetWidth;
+          card.classList.add('animated');
+        }
+      });
+    }
+
+    chipsMain.forEach(chip => {
+      chip.addEventListener('click', () => {
+        document.querySelector('.chip.active').classList.remove('active');
+        chip.classList.add('active');
+
+        const category = chip.dataset.filter;
+        filterCards(category);
+      });
+    });
+
+    // On animation class added
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach(mutation => {
+        if (mutation.target.classList.contains('animated')) {
+          mutation.target.style.animation = 'fadeInUp 0.5s ease forwards';
+        }
+      });
+    });
+
+    wwbCards.forEach(card => {
+      observer.observe(card, { attributes: true, attributeFilter: ['class'] });
+    });
+
+    // Initial animation load
+    window.addEventListener('DOMContentLoaded', () => {
+      filterCards('all');
+    });
+  </script>
+
+
+
+
+</main>
+
+
+<footer class="bg-black border-top border-dark">
+  <div class="container py-vh-4 text-secondary fw-lighter">
+    <div class="row">
+      <div class="col-12 col-lg-5 py-4 text-center text-lg-start">
+        <a class="navbar-brand pe-md-4 fs-4 col-12 col-md-auto text-center" href="index.html">
+          <span class="brand-text ms-md-1 mt-1 fw-bolder me-md-5">thopps</span>
+        </a>
+
+      </div>
+      <div class="col border-end border-dark">
+        <span class="h6">Company</span>
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a href="#" class="link-fancy link-fancy-light">About us</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="link-fancy link-fancy-light">Legal</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="#" class="link-fancy link-fancy-light">Career</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="link-fancy link-fancy-light">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col border-end border-dark">
+        <span class="h6">Services</span>
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a href="#" class="link-fancy link-fancy-light">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="link-fancy link-fancy-light">Products</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="#" class="link-fancy link-fancy-light">Customers</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="link-fancy link-fancy-light">Portfolio</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="link-fancy link-fancy-light">Success Stories</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="link-fancy link-fancy-light">More</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col">
+        <span class="h6">Support</span>
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a href="#" class="link-fancy link-fancy-light">About us</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="link-fancy link-fancy-light">Legal</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="#" class="link-fancy link-fancy-light">Career</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="link-fancy link-fancy-light">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+
+
+
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 800, // values from 0 to 3000, with step 50ms
+  });
+</script>
+<script>
+  let scrollpos = window.scrollY;
+  const header = document.querySelector(".navbar");
+  const header_height = header.offsetHeight;
+
+  const add_class_on_scroll = () => header.classList.add("scrolled", "shadow-sm");
+  const remove_class_on_scroll = () => header.classList.remove("scrolled", "shadow-sm");
+
+  window.addEventListener('scroll', function () {
+    scrollpos = window.scrollY;
+
+    if (scrollpos >= header_height) { add_class_on_scroll(); }
+    else { remove_class_on_scroll(); }
+
+    console.log(scrollpos);
+  })
+</script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true,
+    offset: 120
+  });
+</script>
+<script>
+  (function () {
+    const words = ["innovation", "intelligence", "technology", "ventures"];
+    let index = 0;
+    const container = document.querySelector(".typed-words");
+    if (!container) return;
+
+    // Create spans for each word
+    const spans = words.map(word => {
+      const span = document.createElement("span");
+      span.textContent = word;
+      container.appendChild(span);
+      return span;
+    });
+
+    function showWord(i) {
+      spans.forEach((span, idx) => {
+        span.classList.remove("active", "exit");
+        if (idx === i) {
+          span.classList.add("active");
+        } else if (idx === (i - 1 + words.length) % words.length) {
+          span.classList.add("exit");
+        }
+      });
+    }
+
+    showWord(index);
+    setInterval(() => {
+      index = (index + 1) % words.length;
+      showWord(index);
+    }, 2000); // Change word every 2 seconds
+  })();
+</script>
+
+<script>
+  const canvas = document.getElementById('starfield');
+  const ctx = canvas.getContext('2d');
+
+  let stars = [];
+  const starCount = 300;
+
+  function resizeCanvas() {
+    canvas.width = canvas.clientWidth;
+    canvas.height = canvas.clientHeight;
+  }
+  window.addEventListener('resize', resizeCanvas);
+  resizeCanvas();
+
+  let mouseX = canvas.width / 2;
+  let mouseY = canvas.height / 2;
+
+  window.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+  });
+
+  for (let i = 0; i < starCount; i++) {
+    stars.push({
+      baseX: Math.random() * canvas.width,
+      baseY: Math.random() * canvas.height,
+      x: 0,
+      y: 0,
+      radius: Math.random() * 1.3 + 0.2,
+      alpha: Math.random(),
+      deltaAlpha: (Math.random() * 0.015) + 0.005,
+      speedX: (Math.random() * 0.1) + 0.02,
+    });
+  }
+
+  function drawStars() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    const centerX = canvas.width / 2;
+    const centerY = canvas.height / 2;
+
+    // Normalize mouse offset -1 to 1
+    const offsetX = (mouseX - centerX) / centerX;
+    const offsetY = (mouseY - centerY) / centerY;
+
+    for (const star of stars) {
+      // Move star left continuously to simulate movement
+      star.baseX -= star.speedX;
+      if (star.baseX < 0) {
+        star.baseX = canvas.width;
+        star.baseY = Math.random() * canvas.height;
+        star.radius = Math.random() * 1.3 + 0.2;
+        star.speedX = (Math.random() * 0.1) + 0.02;
+      }
+
+      // Twinkle effect
+      star.alpha += star.deltaAlpha;
+      if (star.alpha <= 0.3 || star.alpha >= 1) {
+        star.deltaAlpha = -star.deltaAlpha;
+        star.alpha = Math.min(1, Math.max(0.3, star.alpha));
+      }
+
+      // Parallax effect: stars shift opposite to mouse movement scaled by size
+      const parallaxX = -offsetX * star.radius * 10;
+      const parallaxY = -offsetY * star.radius * 10;
+
+      star.x = star.baseX + parallaxX;
+      star.y = star.baseY + parallaxY;
+
+      ctx.beginPath();
+      ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(255, 255, 255, ${star.alpha})`;
+      ctx.fill();
+    }
+
+    requestAnimationFrame(drawStars);
+  }
+
+  drawStars();
+
+
+</script>
+
+<script>
+  (function () {
+    const words = ["innovation", "intelligence", "technology", "ventures"];
+    let wordIndex = 0;
+    let charIndex = 0;
+    const typedSpan = document.querySelector(".typed-words");
+    if (!typedSpan) return;
+
+    function typeWord() {
+      if (charIndex <= words[wordIndex].length) {
+        typedSpan.textContent = words[wordIndex].substring(0, charIndex);
+        charIndex++;
+        setTimeout(typeWord, 120);  // typing speed
+      } else {
+        setTimeout(eraseWord, 1500);  // pause before erasing
+      }
+    }
+
+    function eraseWord() {
+      if (charIndex >= 0) {
+        typedSpan.textContent = words[wordIndex].substring(0, charIndex);
+        charIndex--;
+        setTimeout(eraseWord, 80);  // erasing speed
+      } else {
+        wordIndex = (wordIndex + 1) % words.length;
+        setTimeout(typeWord, 300);
+      }
+    }
+
+    typeWord();
+  })();
+</script>
+<style>
+  @keyframes fadeSlideIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
+<script>
+  // Filtering script
+  document.addEventListener('DOMContentLoaded', () => {
+    const chips = document.querySelectorAll('.wwab-chip');
+    const wwabCards = document.querySelectorAll('.wwab-card');
+
+    chips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        const filter = chip.getAttribute('data-filter');
+
+        // Update active state on chips and aria-pressed
+        chips.forEach(c => {
+          c.classList.remove('wwab-chip--active');
+          c.setAttribute('aria-pressed', 'false');
+        });
+        chip.classList.add('wwab-chip--active');
+        chip.setAttribute('aria-pressed', 'true');
+
+        // Show/hide cards based on filter
+        cards.forEach(card => {
+          const category = card.getAttribute('data-category');
+          if (filter === 'all' || filter === category) {
+            card.style.display = '';
+            card.setAttribute('aria-hidden', 'false');
+          } else {
+            card.style.display = 'none';
+            card.setAttribute('aria-hidden', 'true');
+          }
+        });
+      });
+
+      // Keyboard accessibility for Enter and Space keys on chips
+      chip.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          chip.click();
+        }
+      });
+    });
+  });
+</script>
+
+<script>
+  const chips = document.querySelectorAll('.chip');
+  const wwbCards2 = document.querySelectorAll('.card_wwb');
+
+  function filterCards(category) {
+    wwbCards2.forEach(card => {
+      const isMatch = category === 'all' || card.dataset.category === category;
+
+      if (isMatch) {
+        card.classList.add('show');
+      } else {
+        card.classList.remove('show');
+        // Optional delay to hide element after animation ends
+        setTimeout(() => {
+          card.style.display = 'none';
+        }, 300);
+      }
+    });
+  }
+
+  chips.forEach(chip => {
+    chip.addEventListener('click', () => {
+      document.querySelector('.chip.active')?.classList.remove('active');
+      chip.classList.add('active');
+
+      const category = chip.dataset.filter;
+      filterCards(category);
+    });
+  });
+
+  // Show all by default on page load
+  window.addEventListener('DOMContentLoaded', () => {
+    wwbCards2.forEach(card => {
+      card.classList.add('show');
+    });
+  });
+</script>
+
+
+<script>
+  const chipsWwab = document.querySelectorAll('.wwab-chip');
+  const cards = document.querySelectorAll('.wwab-card');
+
+  chipsWwab.forEach(chip => {
+    chip.addEventListener('click', () => {
+      const filter = chip.dataset.filter;
+
+      chipsWwab.forEach(c => {
+        c.classList.remove('wwab-chip--active');
+        c.setAttribute('aria-pressed', 'false');
+      });
+
+      chip.classList.add('wwab-chip--active');
+      chip.setAttribute('aria-pressed', 'true');
+
+      cards.forEach(card => {
+        const category = card.dataset.category;
+        card.hidden = (filter !== 'all' && category !== filter);
+      });
+    });
+  });
+</script>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const chips = document.querySelectorAll('.chip');
+    const cardGrid = document.querySelector('.card-grid');
+    const cardWwbList = Array.from(document.querySelectorAll('.card_wwb'));
+
+    // Dynamically add category label to each card
+    cardWwbList.forEach(card => {
+      const category = card.getAttribute('data-category');
+      const label = document.createElement('div');
+      label.className = 'category-label';
+      // Capitalize first letter for display
+      label.textContent = category.charAt(0).toUpperCase() + category.slice(1);
+      card.appendChild(label);
+    });
+
+    function updateGrid(filteredCards) {
+      cardWwbList.forEach(card => {
+        card.style.display = filteredCards.includes(card) ? 'flex' : 'none';
+      });
+
+      // If filtered cards > 6, enable vertical scroll
+      if (filteredCards.length > 6) {
+        cardGrid.classList.add('scrollable');
+      } else {
+        cardGrid.classList.remove('scrollable');
+      }
+    }
+
+    chips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        chips.forEach(c => {
+          c.classList.remove('active');
+          c.setAttribute('aria-pressed', 'false');
+        });
+        chip.classList.add('active');
+        chip.setAttribute('aria-pressed', 'true');
+
+        const filter = chip.getAttribute('data-filter');
+        const filteredCards = filter === 'all'
+          ? cardWwbList
+          : cardWwbList.filter(card => card.getAttribute('data-category') === filter);
+
+        updateGrid(filteredCards);
+      });
+
+      chip.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          chip.click();
+        }
+      });
+    });
+
+    // Initialize grid showing all cards
+    updateGrid(cardWwbList);
+  });
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const heading = document.querySelector(".reveal-heading");
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          heading.classList.add("visible");
+          heading.classList.remove("hide-down");
+        } else {
+          // If scrolling down out of view
+          if (entry.boundingClientRect.top < 0) {
+            heading.classList.remove("visible");
+            heading.classList.add("hide-down");
+          }
+          // If scrolling up out of view
+          else {
+            heading.classList.remove("visible");
+            heading.classList.add("hide-down");
+          }
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    observer.observe(heading);
+  });
+</script>
+<script>document.querySelectorAll('.card_wwb').forEach(card => {
+  card.addEventListener('click', e => {
+    // Toggle the show class on .card-content inside the clicked card
+    const content = card.querySelector('.card-content');
+    if (content.classList.contains('show')) {
+      content.classList.remove('show');
+      card.style.transform = ''; // reset transform
+      card.style.boxShadow = '';
+    } else {
+      // Hide all others first
+      document.querySelectorAll('.card-content.show').forEach(c => {
+        c.classList.remove('show');
+        c.parentElement.style.transform = '';
+        c.parentElement.style.boxShadow = '';
+      });
+      // Show clicked card content with popup effect
+      content.classList.add('show');
+      card.style.transform = 'translateY(-6px)';
+      card.style.boxShadow =
+        '0 12px 24px rgba(60, 76, 225, 0.15), 0 6px 12px rgba(60, 76, 225, 0.12)';
+    }
+    e.stopPropagation();
+  });
+});
+
+// Click outside to close any open card content
+document.body.addEventListener('click', () => {
+  document.querySelectorAll('.card-content.show').forEach(c => {
+    c.classList.remove('show');
+    c.parentElement.style.transform = '';
+    c.parentElement.style.boxShadow = '';
+  });
+});
+</script>
+</body>
+
+</html>
